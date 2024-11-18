@@ -48,7 +48,8 @@ and [`scale-<label>`](../glossary.md#scale-entities) are discussed later in sect
 
 For derivatives of template- and altas-generating pipelines, which typically aggregate
 several sessions and/or subjects, the derivatives-specific
-[`tpl-<label>` entity](../glossary.md#template-entities) is dual in terms of usage to BIDS raw's
+[`tpl-<label>` entity](../glossary.md#template-entities) and
+[`atlas-<label>` entity](../glossary.md#atlas-entities) is dual in terms of usage to BIDS raw's
 [`sub-<label>`](../glossary.md#subject-entities), and MAY be employed as follows:
 
 ```Text
@@ -57,6 +58,7 @@ several sessions and/or subjects, the derivatives-specific
         [cohort-<label>/]
            [<datatype>/]
                tpl-<label>_<source_entities>[_cohort-<label>][_atlas-<label>][seg-<label>][_scale-<label>][_res-<label>][_den-<label>][_desc-<label>]_<suffix>.<extension>
+               atlas-<label>_<source_entities>[_cohort-<label>][_atlas-<label>][seg-<label>][_scale-<label>][_res-<label>][_den-<label>][_desc-<label>]_<suffix>.<extension>
 ```
 
 where [`suffix`](../glossary.md#suffix-common_principles) will generally be existing BIDS raw modalities
