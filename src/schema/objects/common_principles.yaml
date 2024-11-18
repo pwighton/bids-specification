@@ -14,8 +14,8 @@ atlas:
     is [Bijsterbosch et al. (2020)](https://doi.org/10.1038/s41593-020-00726-z).
 
     To further differentiate the concept of *atlas* and *template* throughout the specification,
-    *template* will designate a standardized stereotaxy frame where
-    some feature or features are mapped through spatial normalization and then possibly averaged.
+    *template* will designate an aggregation of ordinal data which MAY define a standardized stereotaxy
+    frame where some feature or features are mapped through spatial normalization and then possibly averaged.
     Conversely, *atlas* will designate a specific methodology or algorithm to
     create meaningful knowledge annotations about the brain such as landmarks or segmentations.
 data_acquisition:
@@ -156,7 +156,10 @@ space:
   description: |
     A reference [coordinate system](SPEC_ROOT/appendices/coordinate-systems.md) of analysis
     engendered by the spatiotemporal distribution of neuroimaging features such as
-    those given by subjects' and templates' data.
+    those given by subjects' and templates' data.  Every image file defines it's own space,
+    which is commonly referred to as the native space of an image.  When a new space is
+    deliberately created, it is done by creating a template which serves as the authoritative
+    definition of that space. The template name MUST match the name of the space it is defining.
 suffix:
   display_name: suffix
   description: |
@@ -181,12 +184,14 @@ task:
 template:
   display_name: Template
   description: |
-    An average feature map obtained by aggregation of subjects and/or sessions that allows the
-    spatial location of brain anatomy and function of the templated cohort.
-    Templates operationalize the concept of *standardized spatial frame of analysis*,
-    a common *Space* in which subjects' data can be spatially-normalized into for group inference.
+    An average feature map obtained by aggregation of subjects and/or sessions that MAY serve as the
+    *authoritative definition* of a *space*.
+    Templates MAY operationalize the concept of *standardized spatial frame of analysis*,
+    a common *space* in which subjects' data can be spatially-normalized into for group inference.
     Like subjects' feature maps generate a *native* spatial frame of reference for analyses,
-    templates engender a *generic* or *standard* space of analysis were subjects can be spatiotemporally
+    templates MAY engender a *generic* or *standard* space of analysis were subjects can be spatiotemporally
     aligned into.
-    In other words, *templates* (that is, specific feature maps) are *authoritative definitions* of *spaces*
-    in that they instantiate the abstract concept of *space*.
+    When a template serves as the authoritative definition of a space, the `space_` entity MUST NOT be used.
+    Rather, the name of the template is the name of the space it defines.  When a template is simply an aggregation of
+    imaging data, and is NOT serving as the authoritative definition of a space, then the `space_` entity MUST be used 
+    to denote the sapce the aggregation of data is in.
