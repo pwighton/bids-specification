@@ -16,11 +16,13 @@ The following entities MAY be employed to specify template- and atlas-derived re
      a [template](../common-principles.md).
 -    [`space-<label>`](../glossary.md#space-entities) is REQUIRED to disambiguate derivatives defined with
      respect to different [coordinate systems](../appendices/coordinate-systems.md), following the general
-     BIDS-Derivatives specifications.
+     BIDS-Derivatives specifications.  It is also REQUIRED when [`tpl-<label>`](../glossary.md#template-entities) is used,
+     and the template is NOT serving as the authoritative definition of a space.
 -    [`cohort-<label>`](../glossary.md#cohort-entities) is REQUIRED to disambiguate derivatives defined with
      respect to different cohort instances of a single [space (coordinate system)](../appendices/coordinate-systems.md).
      Please note that [`cohort-<label>`](../glossary.md#cohort-entities) MUST NOT be used if neither
-     [`tpl-<label>`](../glossary.md#template-entities) nor [`space-<label>`](../glossary.md#space-entities) are used.
+     [`tpl-<label>`](../glossary.md#template-entities) nor [`space-<label>`](../glossary.md#space-entities)
+     nor [`atlas-<labl>`](../glossary.md#atlas-entities) are used.
 -    [`atlas-<label>`](../glossary.md#atlas-entities) is REQUIRED to encode files pertaining
      or derived from the atlas identified by the entity's label.
 -    [`seg-<label>`](../glossary.md#segmentation-entities) is REQUIRED when a single atlas has several different
@@ -97,10 +99,10 @@ A guide for using macros can be found at
    "colin27-pipeline": {
       "sub-01": {
          "anat": {
-            "sub-01_label-brain_mask.nii.gz": "",
-            "sub-01_label-head_mask.nii.gz": "",
-            "sub-01_T1w.nii.gz": "",
-            "sub-01_T1w.json": "",
+            "sub-colin27_label-brain_mask.nii.gz": "",
+            "sub-colin27_label-head_mask.nii.gz": "",
+            "sub-colin27_T1w.nii.gz": "",
+            "sub-colin27_T1w.json": "",
          },
       },
    }
@@ -118,12 +120,12 @@ A guide for using macros can be found at
    "colin27-pipeline": {
       "sub-01": {
          "anat": {
-            "sub-01_res-1_label-brain_mask.nii.gz": "",
-            "sub-01_res-1_label-head_mask.nii.gz": "",
-            "sub-01_res-1_T1w.nii.gz": "",
-            "sub-01_res-1_T1w.json": "",
-            "sub-01_res-2_T1w.nii.gz": "",
-            "sub-01_res-2_T1w.json": "",
+            "sub-colin27_res-1_label-brain_mask.nii.gz": "",
+            "sub-colin27_res-1_label-head_mask.nii.gz": "",
+            "sub-colin27_res-1_T1w.nii.gz": "",
+            "sub-colin27_res-1_T1w.json": "",
+            "sub-colin27_res-2_T1w.nii.gz": "",
+            "sub-colin27_res-2_T1w.json": "",
          },
       },
    }
@@ -140,9 +142,9 @@ Similarly, deriving from an existing template and atlases is also
 a higher-than-first-level analysis as it builds on a previous analysis.
 
 **Multi-subject templates**.
-While at the subject level analysis it is the individual brain that establishes
+While at the subject-level analysis, it is the individual brain that establishes
 stereotaxy.
-At higher-than-first-level stereotaxy is supported by templates, which are
+At higher-than-first-level, stereotaxy is supported by templates, which are
 encoded through the [`tpl-<label>` entity](../glossary.md#template-entities).
 For the pipeline that generated the MNI152NLin2009cAsym, the outputs would look
 like the following example:
@@ -293,14 +295,14 @@ A guide for using macros can be found at
    "colin27-pipeline": {
       "sub-01": {
          "anat": {
-            "sub-01_atlas-AAL_dseg.json": "",
-            "sub-01_atlas-AAL_dseg.nii.gz": "",
-            "sub-01_atlas-AAL_dseg.tsv": "",
-            "sub-01_atlas-AAL_probseg.nii.gz": "",
-            "sub-01_label-brain_mask.nii.gz": "",
-            "sub-01_label-head_mask.nii.gz": "",
-            "sub-01_T1w.nii.gz": "",
-            "sub-01_T1w.json": "",
+            "sub-colin27_atlas-AAL_dseg.json": "",
+            "sub-colin27_atlas-AAL_dseg.nii.gz": "",
+            "sub-colin27_atlas-AAL_dseg.tsv": "",
+            "sub-colin27_atlas-AAL_probseg.nii.gz": "",
+            "sub-colin27_label-brain_mask.nii.gz": "",
+            "sub-colin27_label-head_mask.nii.gz": "",
+            "sub-colin27_T1w.nii.gz": "",
+            "sub-colin27_T1w.json": "",
          },
       },
    }
@@ -337,18 +339,18 @@ A guide for using macros can be found at
    "colin27-pipeline": {
       "sub-01": {
          "anat": {
-            "sub-01_space-MNI305_atlas-AAL_dseg.json": "",
-            "sub-01_space-MNI305_atlas-AAL_dseg.nii.gz": "",
-            "sub-01_space-MNI305_atlas-AAL_dseg.tsv": "",
-            "sub-01_space-MNI305_atlas-AAL_probseg.nii.gz": "",
-            "sub-01_space-MNI305_label-brain_mask.nii.gz": "",
-            "sub-01_space-MNI305_label-head_mask.nii.gz": "",
-            "sub-01_space-MNI305_T1w.nii.gz": "",
-            "sub-01_space-MNI305_T1w.json": "",
-            "sub-01_space-T1w_label-brain_mask.nii.gz": "",
-            "sub-01_space-T1w_label-head_mask.nii.gz": "",
-            "sub-01_space-T1w_T1w.nii.gz": "",
-            "sub-01_space-T1w_T1w.json": "",
+            "sub-colin27_space-MNI305_atlas-AAL_dseg.json": "",
+            "sub-colin27_space-MNI305_atlas-AAL_dseg.nii.gz": "",
+            "sub-colin27_space-MNI305_atlas-AAL_dseg.tsv": "",
+            "sub-colin27_space-MNI305_atlas-AAL_probseg.nii.gz": "",
+            "sub-colin27_space-MNI305_label-brain_mask.nii.gz": "",
+            "sub-colin27_space-MNI305_label-head_mask.nii.gz": "",
+            "sub-colin27_space-MNI305_T1w.nii.gz": "",
+            "sub-colin27_space-MNI305_T1w.json": "",
+            "sub-colin27_space-T1w_label-brain_mask.nii.gz": "",
+            "sub-colin27_space-T1w_label-head_mask.nii.gz": "",
+            "sub-colin27_space-T1w_T1w.nii.gz": "",
+            "sub-colin27_space-T1w_T1w.json": "",
          },
       },
    }
@@ -357,7 +359,10 @@ A guide for using macros can be found at
 
 For example, the [PS13 template](https://doi.org/10.18112/openneuro.ds004401.v1.3.0),
 a molecular imaging brain template of Cyclooxygenase-1 (PET),
-was generated in two standard spaces: `MNI152Lin` and `fsaverage`:
+was generated in two standard spaces: `MNI152Lin` and `fsaverage`.  Here, the use of 
+[`space-<label>` entity](../glossary.md#space-entities) in conjuction with the 
+[`tpl-<label>` entity](../glossary.md#template-entities) signifies that these templates do
+NOT serve as the autoritative defintion of a space:
 
 <!-- This block generates a file tree.
 A guide for using macros can be found at
@@ -367,10 +372,10 @@ A guide for using macros can be found at
    "ps13-pipeline": {
       "tpl-ps13": {
          "pet": {
-            "tpl-ps13_space-fsaverage_atlas-ps13_desc-nopvc_dseg.nii.gz": "",
-            "tpl-ps13_space-fsaverage_atlas-ps13_desc-pvc_dseg.nii.gz": "",
-            "tpl-ps13_space-fsaverage_atlas-ps13_dseg.json": "",
-            "tpl-ps13_space-fsaverage_atlas-ps13_dseg.tsv": "",
+            "atlas-ps13_space-fsaverage_desc-nopvc_dseg.nii.gz": "",
+            "atlas-ps13_space-fsaverage_desc-pvc_dseg.nii.gz": "",
+            "atlas-ps13_space-fsaverage_dseg.json": "",
+            "atlas-ps13_space-fsaverage_dseg.tsv": "",
             "tpl-ps13_space-fsaverage_desc-nopvc_pet.json": "",
             "tpl-ps13_space-fsaverage_desc-nopvc_pet.nii.gz": "",
             "tpl-ps13_space-fsaverage_desc-pvc_pet.json": "",
@@ -431,7 +436,7 @@ A guide for using macros can be found at
 
 If the pipeline generates two different atlases for at least one template space
 in the output, then [`atlas-<label>`](../glossary.md#atlas-entities) is REQUIRED
-for the whole dataset.
+for disambiguation.
 For example, let's imagine the PS13 atlas is revised in 2034, and based on the
 original pipeline and data, it generates now a new manual segmentation
 in the `MNI152Lin` space with some new regions defined.
@@ -445,23 +450,23 @@ A guide for using macros can be found at
    "ps13rev2034-pipeline": {
       "tpl-fsaverage": {
          "pet": {
-            "tpl-ps13_space-fsaverage_atlas-ps13_desc-nopvc_dseg.nii.gz": "",
-            "tpl-ps13_space-fsaverage_atlas-ps13_desc-pvc_dseg.nii.gz": "",
-            "tpl-ps13_space-fsaverage_atlas-ps13_dseg.json": "",
-            "tpl-ps13_space-fsaverage_atlas-ps13_dseg.tsv": "",
-            "tpl-ps13_space-fsaverage_atlas-ps13_hemi-L_den-164k_desc-nopvc_pet.json": "",
-            "tpl-ps13_space-fsaverage_atlas-ps13_stat-std_desc-pvc_pet.nii.gz": "",
+            "atlas-ps13rev2034_space-fsaverage_desc-nopvc_dseg.nii.gz": "",
+            "atlas-ps13rev2034_space-fsaverage_desc-pvc_dseg.nii.gz": "",
+            "atlas-ps13rev2034_space-fsaverage_dseg.json": "",
+            "atlas-ps13rev2034_space-fsaverage_dseg.tsv": "",
+            "atlas-ps13rev2034_space-fsaverage_hemi-L_den-164k_desc-nopvc_pet.json": "",
+            "atlas-ps13rev2034_space-fsaverage_stat-std_desc-pvc_pet.nii.gz": "",
             "...": "",
-            "tpl-ps13_space-MNI152Lin_atlas-ps13_desc-nopvc_dseg.nii.gz": "",
-            "tpl-ps13_space-MNI152Lin_atlas-ps13_desc-pvc_dseg.nii.gz": "",
-            "tpl-ps13_space-MNI152Lin_atlas-ps13_dseg.json": "",
-            "tpl-ps13_space-MNI152Lin_atlas-ps13_dseg.tsv": "",
-            "tpl-ps13_space-MNI152Lin_atlas-ps13_res-1p5_desc-spmvbmNopvc_pet.json": "",
-            "tpl-ps13_space-MNI152Lin_atlas-ps13_res-2_stat-std_desc-pvc_pet.nii.gz": "",
-            "tpl-ps13_space-MNI152Lin_atlas-ps13rev2034_desc-nopvc_dseg.nii.gz": "",
-            "tpl-ps13_space-MNI152Lin_atlas-ps13rev2034_desc-pvc_dseg.nii.gz": "",
-            "tpl-ps13_space-MNI152Lin_atlas-ps13rev2034_dseg.json": "",
-            "tpl-ps13_space-MNI152Lin_atlas-ps13rev2034_dseg.tsv": "",
+            "atlas-ps13rev2034_space-MNI152Lin_atlas-ps13_desc-nopvc_dseg.nii.gz": "",
+            "atlas-ps13rev2034_space-MNI152Lin_atlas-ps13_desc-pvc_dseg.nii.gz": "",
+            "atlas-ps13rev2034_space-MNI152Lin_atlas-ps13_dseg.json": "",
+            "atlas-ps13rev2034_space-MNI152Lin_atlas-ps13_dseg.tsv": "",
+            "tpl-ps13rev2034_space-MNI152Lin_res-1p5_desc-spmvbmNopvc_pet.json": "",
+            "tpl-ps13rev2034_space-MNI152Lin_res-2_stat-std_desc-pvc_pet.nii.gz": "",
+            "tpl-ps13rev2034_space-MNI152Lin_desc-nopvc_dseg.nii.gz": "",
+            "tpl-ps13rev2034_space-MNI152Lin_desc-pvc_dseg.nii.gz": "",
+            "tpl-ps13rev2034_space-MNI152Lin_dseg.json": "",
+            "tpl-ps13rev2034_space-MNI152Lin_dseg.tsv": "",
             "...": "",
          },
       }
@@ -475,7 +480,7 @@ In this case, a feature template map is generated from all the participant(s)
 in the study, and the atlas' artifacts are produced with reference to that
 template.
 
-Either by generating the template space with aligning to a pre-existing template,
+Either by generating the template space aligning to a pre-existing template,
 or by estimating a transform between templates by means of image registration,
 a new template definition MUST be employed if the new template generates
 a new [*space*](../common-principles.md#definitions).
@@ -493,10 +498,10 @@ A guide for using macros can be found at
    "ps13-pipeline": {
       "tpl-PS13": {
          "pet": {
-            "tpl-PS13_desc-nopvc_dseg.nii.gz": "",
-            "tpl-PS13_desc-pvc_dseg.nii.gz": "",
-            "tpl-PS13_dseg.json": "",
-            "tpl-PS13_dseg.tsv": "",
+            "atals-PS13_desc-nopvc_dseg.nii.gz": "",
+            "atlas-PS13_desc-pvc_dseg.nii.gz": "",
+            "atlas-PS13_dseg.json": "",
+            "atlas-PS13_dseg.tsv": "",
             "tpl-PS13_stat-std_desc-fnirtNopvc_pet.json": "",
             "tpl-PS13_stat-std_desc-fnirtNopvc_pet.nii.gz": "",
             "tpl-PS13_stat-std_desc-fnirtPvc_pet.json": "",
@@ -522,18 +527,18 @@ A guide for using macros can be found at
    "ps13-with-atlases-pipeline": {
       "tpl-PS13": {
          "pet": {
-            "tpl-PS13_atlas-Economo1916_desc-nopvc_dseg.nii.gz": "",
-            "tpl-PS13_atlas-Economo1916_desc-pvc_dseg.nii.gz": "",
-            "tpl-PS13_atlas-Economo1916_dseg.json": "",
-            "tpl-PS13_atlas-Economo1916_dseg.tsv": "",
-            "tpl-PS13_atlas-RamonCajal1908_desc-nopvc_dseg.nii.gz": "",
-            "tpl-PS13_atlas-RamonCajal1908_desc-pvc_dseg.nii.gz": "",
-            "tpl-PS13_atlas-RamonCajal1908_dseg.json": "",
-            "tpl-PS13_atlas-RamonCajal1908_dseg.tsv": "",
-            "tpl-PS13_desc-nopvc_dseg.nii.gz": "",
-            "tpl-PS13_desc-pvc_dseg.nii.gz": "",
-            "tpl-PS13_dseg.json": "",
-            "tpl-PS13_dseg.tsv": "",
+            "atlas-Economo1916_desc-nopvc_dseg.nii.gz": "",
+            "atlas-Economo1916_desc-pvc_dseg.nii.gz": "",
+            "atlas-Economo1916_dseg.json": "",
+            "atlas-Economo1916_dseg.tsv": "",
+            "atlas-RamonCajal1908_desc-nopvc_dseg.nii.gz": "",
+            "atlas-RamonCajal1908_desc-pvc_dseg.nii.gz": "",
+            "atlas-RamonCajal1908_dseg.json": "",
+            "atlas-RamonCajal1908_dseg.tsv": "",
+            "atlas-PS13_desc-nopvc_dseg.nii.gz": "",
+            "atlas-PS13_desc-pvc_dseg.nii.gz": "",
+            "atlas-PS13_dseg.json": "",
+            "atlas-PS13_dseg.tsv": "",
             "tpl-PS13_stat-std_desc-fnirtNopvc_pet.json": "",
             "tpl-PS13_stat-std_desc-fnirtNopvc_pet.nii.gz": "",
             "tpl-PS13_stat-std_desc-fnirtPvc_pet.json": "",
@@ -552,7 +557,7 @@ where the `atlas-RamonCajal1908` and `atlas-Economo1916` hypothetically define
 two different atlases (please note that, often, atlases are named after
 the first author and indicating a year of a reference communication).
 The original *default* or *implicit* atlas' artifacts such as
-the `tpl-PS13_desc-nopvc_dseg.nii.gz` segmentation,
+the `atlas-PS13_desc-nopvc_dseg.nii.gz` segmentation,
 which were originally generated with the PS13 template,
 MAY take an [`atlas-<label>`](../glossary.md#atlas-entities) if they
 need to be differentiated from the original template and atlas dataset.
@@ -578,20 +583,20 @@ A guide for using macros can be found at
             "README.md": "",
             "dataset_description.json": "",
             "tpl-SUIT_T1w.nii.gz": "",
-            "tpl-SUIT_atlas-Buckner2011_dseg.json": "",
-            "tpl-SUIT_atlas-Buckner2011_seg-17n_dseg.label.gii": "",
-            "tpl-SUIT_atlas-Buckner2011_seg-17n_dseg.nii.gz": "",
-            "tpl-SUIT_atlas-Buckner2011_seg-17n_dseg.tsv": "",
-            "tpl-SUIT_atlas-Buckner2011_seg-17n_stat-confidence_probseg.nii.gz": "",
-            "tpl-SUIT_atlas-Buckner2011_seg-7n_dseg.label.gii": "",
-            "tpl-SUIT_atlas-Buckner2011_seg-7n_dseg.nii.gz": "",
-            "tpl-SUIT_atlas-Buckner2011_seg-7n_dseg.tsv": "",
-            "tpl-SUIT_atlas-Buckner2011_seg-7n_stat-confidence_probseg.nii.gz": "",
-            "tpl-SUIT_atlas-Diedrichsen2009_dseg.json": "",
-            "tpl-SUIT_atlas-Diedrichsen2009_dseg.label.gii": "",
-            "tpl-SUIT_atlas-Diedrichsen2009_dseg.nii.gz": "",
-            "tpl-SUIT_atlas-Diedrichsen2009_dseg.tsv": "",
-            "tpl-SUIT_atlas-Diedrichsen2009_probseg.nii.gz": "",
+            "atlas-Buckner2011_space-SUIT_dseg.json": "",
+            "atlas-Buckner2011_space-SUIT_seg-17n_dseg.label.gii": "",
+            "atlas-Buckner2011_space-SUIT_seg-17n_dseg.nii.gz": "",
+            "atlas-Buckner2011_space-SUIT_seg-17n_dseg.tsv": "",
+            "atlas-Buckner2011_space-SUIT_seg-17n_stat-confidence_probseg.nii.gz": "",
+            "atlas-Buckner2011_space-SUIT_seg-7n_dseg.label.gii": "",
+            "atlas-Buckner2011_space-SUIT_seg-7n_dseg.nii.gz": "",
+            "atlas-Buckner2011_space-SUIT_seg-7n_dseg.tsv": "",
+            "atlas-Buckner2011_space-SUIT_seg-7n_stat-confidence_probseg.nii.gz": "",
+            "atlas-Diedrichsen2009_dseg.json": "",
+            "atlas-Diedrichsen2009_dseg.label.gii": "",
+            "atlas-Diedrichsen2009_dseg.nii.gz": "",
+            "atlas-Diedrichsen2009_dseg.tsv": "",
+            "atlas-Diedrichsen2009_probseg.nii.gz": "",
             "tpl-SUIT_flat.surf.gii": "",
             "tpl-SUIT_sulc.shape.gii": "",
          },
@@ -634,12 +639,12 @@ A guide for using macros can be found at
             "sub-67_T1w.nii.gz": "",
          },
       },
-      "tpl-MNI152NLin2009cAsym": {
+      "atlas-MIAL67ThalamicNuclei": {
          "anat": {
-            "tpl-MNI152NLin2009cAsym_atlas-MIAL67ThalamicNuclei_dseg.json": "",
-            "tpl-MNI152NLin2009cAsym_atlas-MIAL67ThalamicNuclei_dseg.tsv": "",
-            "tpl-MNI152NLin2009cAsym_atlas-MIAL67ThalamicNuclei_res-1_dseg.nii.gz": "",
-            "tpl-MNI152NLin2009cAsym_atlas-MIAL67ThalamicNuclei_res-1_probseg.nii.gz": "",
+            "atlas-MIAL67ThalamicNuclei_space-MNI152NLin2009cAsym_dseg.json": "",
+            "atlas-MIAL67ThalamicNuclei_space-MNI152NLin2009cAsym_dseg.tsv": "",
+            "atlas-MIAL67ThalamicNuclei_space-MNI152NLin2009cAsym_res-1_dseg.nii.gz": "",
+            "atlas-MIAL67ThalamicNuclei_space-MNI152NLin2009cAsym_res-1_probseg.nii.gz": "",
          },
       },
    }
@@ -676,12 +681,12 @@ A guide for using macros can be found at
             "sub-67_T1w.nii.gz": "",
          },
       },
-      "tpl-MNI152NLin2009cAsym": {
+      "atlas-MIAL67ThalamicNuclei": {
          "anat": {
-            "tpl-MNI152NLin2009cAsym_atlas-MIAL67ThalamicNuclei_dseg.json": "",
-            "tpl-MNI152NLin2009cAsym_atlas-MIAL67ThalamicNuclei_dseg.tsv": "",
-            "tpl-MNI152NLin2009cAsym_atlas-MIAL67ThalamicNuclei_res-1_dseg.nii.gz": "",
-            "tpl-MNI152NLin2009cAsym_atlas-MIAL67ThalamicNuclei_res-1_probseg.nii.gz": "",
+            "atlas-MIAL67ThalamicNuclei_space-MNI152NLin2009cAsym_dseg.json": "",
+            "atlas-MIAL67ThalamicNuclei_space-MNI152NLin2009cAsym_dseg.tsv": "",
+            "atlas-MIAL67ThalamicNuclei_space-MNI152NLin2009cAsym_res-1_dseg.nii.gz": "",
+            "atlas-MIAL67ThalamicNuclei_space-MNI152NLin2009cAsym_res-1_probseg.nii.gz": "",
          },
       },
    }
@@ -718,16 +723,12 @@ A guide for using macros can be found at
             "sub-67_T1w.nii.gz": "",
          },
       },
-      "tpl-MNI152NLin2009cAsym": {
+      "atlas-MIAL67ThalamicNuclei": {
          "anat": {
-            "tpl-MNI152NLin2009cAsym_atlas-MIAL67ThalamicNuclei_res-1_dseg.nii.gz": "",
-            "tpl-MNI152NLin2009cAsym_atlas-MIAL67ThalamicNuclei_res-1_probseg.nii.gz": "",
-         },
-      },
-      "tpl-MNI152NLin6Asym": {
-         "anat": {
-            "tpl-MNI152NLin6Asym_atlas-MIAL67ThalamicNuclei_res-1_dseg.nii.gz": "",
-            "tpl-MNI152NLin6Asym_atlas-MIAL67ThalamicNuclei_res-1_probseg.nii.gz": "",
+            "atlas-MIAL67ThalamicNuclei_space-MNI152NLin2009cAsym_res-1_dseg.nii.gz": "",
+            "atlas-MIAL67ThalamicNuclei_space-MNI152NLin2009cAsym_res-1_probseg.nii.gz": "",
+            "atlas-MIAL67ThalamicNuclei_space-MNI152NLin6Asym_res-1_dseg.nii.gz": "",
+            "atlas-MIAL67ThalamicNuclei_space-MNI152NLin6Asym_res-1_probseg.nii.gz": "",
          },
       },
    }
@@ -765,10 +766,10 @@ A guide for using macros can be found at
             "sub-67_T1w.nii.gz": "",
          },
       },
-      "tpl-MNI152NLin2009cAsym": {
+      "atlas-MIAL67ThalamicNuclei": {
          "anat": {
-            "tpl-MNI152NLin2009cAsym_atlas-MIAL67ThalamicNuclei_res-1_dseg.nii.gz": "",
-            "tpl-MNI152NLin2009cAsym_atlas-MIAL67ThalamicNuclei_res-1_probseg.nii.gz": "",
+            "atlas-MIAL67ThalamicNuclei_space-MNI152NLin2009cAsym_res-1_dseg.nii.gz": "",
+            "atlas-MIAL67ThalamicNuclei_space-MNI152NLin2009cAsym_res-1_probseg.nii.gz": "",
          },
       },
    }
@@ -809,17 +810,13 @@ A guide for using macros can be found at
             "sub-67_T1w.nii.gz": "",
          },
       },
-      "tpl-MNI152NLin2009cAsym": {
+      "atlas-MIAL67ThalamicNuclei": {
          "anat": {
-            "tpl-MNI152NLin2009cAsym_from-MNI152NLin6Asym_mode-image_xfm.h5": "",
-            "tpl-MNI152NLin2009cAsym_atlas-MIAL67ThalamicNuclei_res-1_dseg.nii.gz": "",
-            "tpl-MNI152NLin2009cAsym_atlas-MIAL67ThalamicNuclei_res-1_probseg.nii.gz": "",
-         },
-      },
-      "tpl-MNI152NLin6Asym": {
-         "anat": {
-            "tpl-MNI152NLin6Asym_atlas-MIAL67ThalamicNuclei_res-1_dseg.nii.gz": "",
-            "tpl-MNI152NLin6Asym_atlas-MIAL67ThalamicNuclei_res-1_probseg.nii.gz": "",
+            "to-MNI152NLin2009cAsym_from-MNI152NLin6Asym_mode-image_xfm.h5": "",
+            "atlas-MIAL67ThalamicNuclei_space-MNI152NLin2009cAsym_res-1_dseg.nii.gz": "",
+            "atlas-MIAL67ThalamicNuclei_space-MNI152NLin2009cAsym_res-1_probseg.nii.gz": "",
+            "atlas-MIAL67ThalamicNuclei_space-MNI152NLin6Asym_res-1_dseg.nii.gz": "",
+            "atlas-MIAL67ThalamicNuclei_space-MNI152NLin6Asym_res-1_probseg.nii.gz": "",
          },
       },
    }
