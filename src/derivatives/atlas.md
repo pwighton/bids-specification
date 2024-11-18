@@ -8,23 +8,21 @@ segmentations, and other knowledge annotations such as landmarks defined with
 respect to individual or template brains that are supported by spaces
 such as surfaces and regular grids (images).
 
-For derivatives with atlases in their provenance corresponding to individual subjects,
-the organization follows the standards for BIDS raw and derivatives.
+The organization follows the standards for BIDS raw and derivatives.
 The following entities MAY be employed to specify template- and atlas-derived results:
 
 -    [`tpl-<label>`](../glossary.md#template-entities) is REQUIRED to specify derivatives defining
-     a [template](../common-principles.md).
+     a [template](../common-principles.md).  MUST NOT be used alongside `atlas-<label>`
+-    [`atlas-<label>`](../glossary.md#atlas-entities) is REQUIRED to specify derivatives defining an [atlas](../common-principles.md).  MUST NOT be used alongside `template-<label>`
 -    [`space-<label>`](../glossary.md#space-entities) is REQUIRED to disambiguate derivatives defined with
      respect to different [coordinate systems](../appendices/coordinate-systems.md), following the general
      BIDS-Derivatives specifications.  It is also REQUIRED when [`tpl-<label>`](../glossary.md#template-entities) is used,
      and the template is NOT serving as the authoritative definition of a space.
 -    [`cohort-<label>`](../glossary.md#cohort-entities) is REQUIRED to disambiguate derivatives defined with
-     respect to different cohort instances of a single [space (coordinate system)](../appendices/coordinate-systems.md).
+     respect to different cohort instances.
      Please note that [`cohort-<label>`](../glossary.md#cohort-entities) MUST NOT be used if neither
      [`tpl-<label>`](../glossary.md#template-entities) nor [`space-<label>`](../glossary.md#space-entities)
      nor [`atlas-<labl>`](../glossary.md#atlas-entities) are used.
--    [`atlas-<label>`](../glossary.md#atlas-entities) is REQUIRED to encode files pertaining
-     or derived from the atlas identified by the entity's label.
 -    [`seg-<label>`](../glossary.md#segmentation-entities) is REQUIRED when a single atlas has several different
      realizations (for instance, segmentations and parcellations created with different criteria) that
      need disambiguation.
@@ -32,24 +30,20 @@ The following entities MAY be employed to specify template- and atlas-derived re
      when the atlas has more than one 'brain unit' resolutions, typically relating to the area covered
      by regions.
 
-The general filename pattern for subject derivatives with templates and atlases in their provenance
+The general filename pattern for subject-level derivatives with templates and atlases 
 follows the general BIDS-Derivatives pattern:
 
 ```Text
 <pipeline_name>/
     sub-<label>/
         <datatype>/
-            <source_entities>[_space-<space>][_cohort-<label>][_atlas-<label>][seg-<label>][_scale-<label>][_res-<label>][_den-<label>][_desc-<label>]_<suffix>.<extension>
+            <source_entities>[_space-<space>][_cohort-<label>][_atlas-<label>][_template-<label>][seg-<label>][_scale-<label>][_res-<label>][_den-<label>][_desc-<label>]_<suffix>.<extension>
 ```
-
-[`atlas-<label>`](../glossary.md#atlas-entities), [`seg-<label>`](../glossary.md#segmentation-entities),
-and [`scale-<label>`](../glossary.md#scale-entities) are discussed later in section
-[Filenames of derivatives with atlases in their provenance](#filenames-of-derivatives-with-atlases-in-their-provenance).
 
 For derivatives of template- and altas-generating pipelines, which typically aggregate
 several sessions and/or subjects, the derivatives-specific
 [`tpl-<label>` entity](../glossary.md#template-entities) and
-[`atlas-<label>` entity](../glossary.md#atlas-entities) is dual in terms of usage to BIDS raw's
+[`atlas-<label>` entity](../glossary.md#atlas-entities) are dual in terms of usage to BIDS raw's
 [`sub-<label>`](../glossary.md#subject-entities), and MAY be employed as follows:
 
 ```Text
@@ -69,10 +63,9 @@ In terms of [`extension`](../glossary.md#extension-common_principles), `nii[.gz]
 Please note that the [`<datatype>/` directory](../glossary.md#data_type-common_principles) is RECOMMENDED.
 The [`<datatype>/` directory](../glossary.md#data_type-common_principles) MAY be omitted in the case
 only one data type (such as `anat/`) is stored under the `tpl-<label>` directory.
-The [`cohort-<label>` directory and entity](../glossary.md#cohort-entities) MUST be specified for templates
+The [`cohort-<label>` directory and entity](../glossary.md#cohort-entities) MAY be specified for templates
 with several cohorts.
-The [`cohort-<label>` directory and entity](../glossary.md#cohort-entities) are dual in terms of usage to BIDS raw's
-[`session-<label>`](../glossary.md#session-entities).
+
 Both subject-level and template-level results can coexist in a single pipeline directory:
 
 ```Text
@@ -185,7 +178,7 @@ A guide for using macros can be found at
 
 **Multi-cohort templates.**
 In the case that the template-generating pipeline derives
-several cohorts, the file structure must employ the
+several cohorts, the file structure MAY employ the
 [`cohort-<label>` directory and entity](../glossary.md#cohort-entities).
 
 <!-- This block generates a file tree.
@@ -826,53 +819,6 @@ A guide for using macros can be found at
 }}
 
 The next subsection describes this latter use-case in further depth.
-
-## Filenames of derivatives with atlases in their provenance
-
-Like for the [`space-<label>` entity](../glossary.md#space-entities),
-outputs derived from atlases MUST employ
-[`atlas-<label>`](../glossary.md#atlas-entities),
-[`seg-<label>`](../glossary.md#segmentation-entities), and
-[`scale-<label>`](../glossary.md#scale-entities) when necessary:
-
-<!-- This block generates a file tree.
-A guide for using macros can be found at
- https://github.com/bids-standard/bids-specification/blob/master/macros_doc.md
--->
-{{ MACROS___make_filetree_example({
-   "bold-pipeline": {
-      "atlas-Schaefer2018_dseg.json": "",
-      "atlas-Schaefer2018_seg-7n_scale-100_dseg.tsv": "",
-      "atlas-Schaefer2018_seg-7n_scale-200_dseg.tsv": "",
-      "atlas-Schaefer2018_seg-7n_scale-300_dseg.tsv": "",
-      "atlas-Schaefer2018_seg-17n_scale-100_dseg.tsv": "",
-      "atlas-Schaefer2018_seg-17n_scale-200_dseg.tsv": "",
-      "atlas-Schaefer2018_seg-17n_scale-300_dseg.tsv": "",
-      "atlas-Schaefer2018_seg-kong17n_scale-100_dseg.tsv": "",
-      "atlas-Schaefer2018_seg-kong17n_scale-200_dseg.tsv": "",
-      "atlas-Schaefer2018_seg-kong17n_scale-300_dseg.tsv": "",
-      "sub-01": {
-         "anat": {
-            "sub-01_hemi-L_atlas-Schaefer2018_seg-7n_scale-100_den-164k_dseg.label.gii": "",
-            "sub-01_hemi-L_atlas-Schaefer2018_seg-7n_scale-200_den-164k_dseg.label.gii": "",
-            "sub-01_hemi-L_atlas-Schaefer2018_seg-7n_scale-300_den-164k_dseg.label.gii": "",
-            "sub-01_hemi-L_atlas-Schaefer2018_seg-17n_scale-100_den-164k_dseg.label.gii": "",
-            "sub-01_hemi-L_atlas-Schaefer2018_seg-17n_scale-200_den-164k_dseg.label.gii": "",
-            "sub-01_hemi-L_atlas-Schaefer2018_seg-17n_scale-300_den-164k_dseg.label.gii": "",
-            "sub-01_hemi-L_atlas-Schaefer2018_seg-kong17n_scale-100_den-164k_dseg.label.gii": "",
-            "sub-01_hemi-L_atlas-Schaefer2018_seg-kong17n_scale-200_den-164k_dseg.label.gii": "",
-            "sub-01_hemi-L_atlas-Schaefer2018_seg-kong17n_scale-300_den-164k_dseg.label.gii": "",
-            "...": "",
-            "sub-01_hemi-R_atlas-Schaefer2018_seg-kong17n_scale-300_den-164k_dseg.label.gii": "",
-         },
-         "bold": {
-            "sub-01_task-rest_hemi-L_den-164k_bold.func.gii": "",
-            "sub-01_task-rest_hemi-R_den-164k_bold.func.gii": "",
-         }
-      },
-   }
-})
-}}
 
 ## Tabular data
 
