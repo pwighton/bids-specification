@@ -94,8 +94,8 @@ A guide for using macros can be found at
    "colin27-pipeline": {
       "sub-01": {
          "anat": {
-            "tpl-colin27_seg-brain_mask.nii.gz": "",
-            "tpl-colin27_seg_head_mask.nii.gz": '',
+            "atlas-colin27_seg-brain_mask.nii.gz": "",
+            "atlas-colin27_seg_head_mask.nii.gz": '',
             "tpl-colin27_T1w.nii.gz": "",
             "tpl-colin27_T1w.json": "",
          },
@@ -115,8 +115,8 @@ A guide for using macros can be found at
    "colin27-pipeline": {
       "sub-01": {
          "anat": {
-            "tpl-colin27_res-1_seg-brain_mask.nii.gz": "",
-            "tpl-colin27_res-1_seg-head_mask.nii.gz": "",
+            "atlas-colin27_res-1_seg-brain_mask.nii.gz": "",
+            "atlas-colin27_res-1_seg-head_mask.nii.gz": "",
             "tpl-colin27_res-1_T1w.nii.gz": "",
             "tpl-colin27_res-1_T1w.json": "",
             "tpl-colin27_res-2_T1w.nii.gz": "",
@@ -150,22 +150,22 @@ A guide for using macros can be found at
    "mni152nlin2009casym-pipeline": {
       "tpl-MNI152NLin2009cAsym": {
          "anat": {
-            "tpl-MNI152NLin2009cAsym_res-1_seg-brain_mask.nii.gz": "",
-            "tpl-MNI152NLin2009cAsym_res-1_seg-eye_mask.nii.gz": "",
-            "tpl-MNI152NLin2009cAsym_res-1_seg-face_mask.nii.gz": "",
-            "tpl-MNI152NLin2009cAsym_res-1_seg-head_mask.nii.gz": "",
-            "tpl-MNI152NLin2009cAsym_res-1_seg-CSF_probseg.nii.gz": "",
-            "tpl-MNI152NLin2009cAsym_res-1_seg-GM_probseg.nii.gz": "",
-            "tpl-MNI152NLin2009cAsym_res-1_seg-WM_probseg.nii.gz": "",
+            "atlas-MNI152NLin2009cAsym_res-1_seg-brain_mask.nii.gz": "",
+            "atlas-MNI152NLin2009cAsym_res-1_seg-eye_mask.nii.gz": "",
+            "atlas-MNI152NLin2009cAsym_res-1_seg-face_mask.nii.gz": "",
+            "atlas-MNI152NLin2009cAsym_res-1_seg-head_mask.nii.gz": "",
+            "atlas-MNI152NLin2009cAsym_res-1_seg-CSF_probseg.nii.gz": "",
+            "atlas-MNI152NLin2009cAsym_res-1_seg-GM_probseg.nii.gz": "",
+            "atlas-MNI152NLin2009cAsym_res-1_seg-WM_probseg.nii.gz": "",
             "tpl-MNI152NLin2009cAsym_res-1_T1w.nii.gz": "",
             "tpl-MNI152NLin2009cAsym_res-1_T1w.json": "",
-            "tpl-MNI152NLin2009cAsym_res-2_seg-brain_mask.nii.gz": "",
-            "tpl-MNI152NLin2009cAsym_res-2_seg-eye_mask.nii.gz": "",
-            "tpl-MNI152NLin2009cAsym_res-2_seg-face_mask.nii.gz": "",
-            "tpl-MNI152NLin2009cAsym_res-2_seg-head_mask.nii.gz": "",
-            "tpl-MNI152NLin2009cAsym_res-2_seg-CSF_probseg.nii.gz": "",
-            "tpl-MNI152NLin2009cAsym_res-2_seg-GM_probseg.nii.gz": "",
-            "tpl-MNI152NLin2009cAsym_res-2_seg-WM_probseg.nii.gz": "",
+            "atlas-MNI152NLin2009cAsym_res-2_seg-brain_mask.nii.gz": "",
+            "atlas-MNI152NLin2009cAsym_res-2_seg-eye_mask.nii.gz": "",
+            "atlas-MNI152NLin2009cAsym_res-2_seg-face_mask.nii.gz": "",
+            "atlas-MNI152NLin2009cAsym_res-2_seg-head_mask.nii.gz": "",
+            "atlas-MNI152NLin2009cAsym_res-2_seg-CSF_probseg.nii.gz": "",
+            "atlas-MNI152NLin2009cAsym_res-2_seg-GM_probseg.nii.gz": "",
+            "atlas-MNI152NLin2009cAsym_res-2_seg-WM_probseg.nii.gz": "",
             "tpl-MNI152NLin2009cAsym_res-2_T1w.nii.gz": "",
             "tpl-MNI152NLin2009cAsym_res-2_T1w.json": "",
          },
@@ -191,17 +191,17 @@ A guide for using macros can be found at
                "tpl-MNIPediatricAsym_cohort-1_res-1_PD.nii.gz": "",
                "tpl-MNIPediatricAsym_cohort-1_res-1_T1w.nii.gz": "",
                "tpl-MNIPediatricAsym_cohort-1_res-1_T2w.nii.gz": "",
-               "tpl-MNIPediatricAsym_cohort-1_res-1_desc-brain_mask.nii.gz": "",
-               "tpl-MNIPediatricAsym_cohort-1_res-1_seg-CSF_probseg.nii.gz": "",
-               "tpl-MNIPediatricAsym_cohort-1_res-1_seg-GM_probseg.nii.gz": "",
-               "tpl-MNIPediatricAsym_cohort-1_res-1_seg-WM_probseg.nii.gz": "",
+               "atlas-MNIPediatricAsym_cohort-1_res-1_desc-brain_mask.nii.gz": "",
+               "atlas-MNIPediatricAsym_cohort-1_res-1_seg-CSF_probseg.nii.gz": "",
+               "atlas-MNIPediatricAsym_cohort-1_res-1_seg-GM_probseg.nii.gz": "",
+               "atlas-MNIPediatricAsym_cohort-1_res-1_seg-WM_probseg.nii.gz": "",
                "tpl-MNIPediatricAsym_cohort-1_res-2_PD.nii.gz": "",
                "tpl-MNIPediatricAsym_cohort-1_res-2_T1w.nii.gz": "",
                "tpl-MNIPediatricAsym_cohort-1_res-2_T2w.nii.gz": "",
-               "tpl-MNIPediatricAsym_cohort-1_res-2_desc-brain_mask.nii.gz": "",
-               "tpl-MNIPediatricAsym_cohort-1_res-2_seg-CSF_probseg.nii.gz": "",
-               "tpl-MNIPediatricAsym_cohort-1_res-2_seg-GM_probseg.nii.gz": "",
-               "tpl-MNIPediatricAsym_cohort-1_res-2_seg-WM_probseg.nii.gz": "",
+               "atlas-MNIPediatricAsym_cohort-1_res-2_desc-brain_mask.nii.gz": "",
+               "atlas-MNIPediatricAsym_cohort-1_res-2_seg-CSF_probseg.nii.gz": "",
+               "atlas-MNIPediatricAsym_cohort-1_res-2_seg-GM_probseg.nii.gz": "",
+               "atlas-MNIPediatricAsym_cohort-1_res-2_seg-WM_probseg.nii.gz": "",
             },
          },
          "...": "",
@@ -210,17 +210,17 @@ A guide for using macros can be found at
                "tpl-MNIPediatricAsym_cohort-6_res-1_PD.nii.gz": "",
                "tpl-MNIPediatricAsym_cohort-6_res-1_T1w.nii.gz": "",
                "tpl-MNIPediatricAsym_cohort-6_res-1_T2w.nii.gz": "",
-               "tpl-MNIPediatricAsym_cohort-6_res-1_desc-brain_mask.nii.gz": "",
-               "tpl-MNIPediatricAsym_cohort-6_res-1_seg-CSF_probseg.nii.gz": "",
-               "tpl-MNIPediatricAsym_cohort-6_res-1_seg-GM_probseg.nii.gz": "",
-               "tpl-MNIPediatricAsym_cohort-6_res-1_seg-WM_probseg.nii.gz": "",
+               "atlas-MNIPediatricAsym_cohort-6_res-1_desc-brain_mask.nii.gz": "",
+               "atlas-MNIPediatricAsym_cohort-6_res-1_seg-CSF_probseg.nii.gz": "",
+               "atlas-MNIPediatricAsym_cohort-6_res-1_seg-GM_probseg.nii.gz": "",
+               "atlas-MNIPediatricAsym_cohort-6_res-1_seg-WM_probseg.nii.gz": "",
                "tpl-MNIPediatricAsym_cohort-6_res-2_PD.nii.gz": "",
                "tpl-MNIPediatricAsym_cohort-6_res-2_T1w.nii.gz": "",
                "tpl-MNIPediatricAsym_cohort-6_res-2_T2w.nii.gz": "",
-               "tpl-MNIPediatricAsym_cohort-6_res-2_desc-brain_mask.nii.gz": "",
-               "tpl-MNIPediatricAsym_cohort-6_res-2_seg-CSF_probseg.nii.gz": "",
-               "tpl-MNIPediatricAsym_cohort-6_res-2_seg-GM_probseg.nii.gz": "",
-               "tpl-MNIPediatricAsym_cohort-6_res-2_seg-WM_probseg.nii.gz": "",
+               "atlas-MNIPediatricAsym_cohort-6_res-2_desc-brain_mask.nii.gz": "",
+               "atlas-MNIPediatricAsym_cohort-6_res-2_seg-CSF_probseg.nii.gz": "",
+               "atlas-MNIPediatricAsym_cohort-6_res-2_seg-GM_probseg.nii.gz": "",
+               "atlas-MNIPediatricAsym_cohort-6_res-2_seg-WM_probseg.nii.gz": "",
             },
          },
       },
@@ -262,7 +262,7 @@ A guide for using macros can be found at
       },
       "tpl-MNI152NLin2009cAsym": {
          "anat": {
-            "tpl-MNI152NLin2009cAsym_res-1_seg-brain_mask.nii.gz": "",
+            "atlas-MNI152NLin2009cAsym_res-1_seg-brain_mask.nii.gz": "",
             "...": "",
             "tpl-MNI152NLin2009cAsym_res-2_T1w.json": "",
          },
@@ -272,7 +272,7 @@ A guide for using macros can be found at
 }}
 
 **Defining atlases and templates referenced to a pre-existing template.**
-Once a standard space is instantiated by a reference template,
+Once a standard space is defined by a reference template,
 atlasing knowledge MAY be specified employing the
 [`atlas-<label>` entity](../glossary.md#atlas-entities).
 
@@ -288,14 +288,14 @@ A guide for using macros can be found at
    "colin27-pipeline": {
       "sub-01": {
          "anat": {
-            "sub-colin27_atlas-AAL_dseg.json": "",
-            "sub-colin27_atlas-AAL_dseg.nii.gz": "",
-            "sub-colin27_atlas-AAL_dseg.tsv": "",
-            "sub-colin27_atlas-AAL_probseg.nii.gz": "",
-            "sub-colin27_seg-brain_mask.nii.gz": "",
-            "sub-colin27_seg-head_mask.nii.gz": "",
-            "sub-colin27_T1w.nii.gz": "",
-            "sub-colin27_T1w.json": "",
+            "atlas-AAL_dseg.json": "",
+            "atlas-AAL_dseg.nii.gz": "",
+            "atlas-AAL_dseg.tsv": "",
+            "atlas-AAL_probseg.nii.gz": "",
+            "atlas-AAL_seg-brain_mask.nii.gz": "",
+            "atlas-AAL_seg-head_mask.nii.gz": "",
+            "tpl-colin27_T1w.nii.gz": "",
+            "tpl-colin27_T1w.json": "",
          },
       },
    }
@@ -332,18 +332,19 @@ A guide for using macros can be found at
    "colin27-pipeline": {
       "sub-01": {
          "anat": {
-            "sub-colin27_space-MNI305_atlas-AAL_dseg.json": "",
-            "sub-colin27_space-MNI305_atlas-AAL_dseg.nii.gz": "",
-            "sub-colin27_space-MNI305_atlas-AAL_dseg.tsv": "",
-            "sub-colin27_space-MNI305_atlas-AAL_probseg.nii.gz": "",
-            "sub-colin27_space-MNI305_seg-brain_mask.nii.gz": "",
-            "sub-colin27_space-MNI305_seg-head_mask.nii.gz": "",
-            "sub-colin27_space-MNI305_T1w.nii.gz": "",
-            "sub-colin27_space-MNI305_T1w.json": "",
-            "sub-colin27_space-T1w_seg-brain_mask.nii.gz": "",
-            "sub-colin27_space-T1w_seg-head_mask.nii.gz": "",
-            "sub-colin27_space-T1w_T1w.nii.gz": "",
-            "sub-colin27_space-T1w_T1w.json": "",
+            "atlas-AAL_space-MNI305_dseg.json": "",
+            "atlas-AAL_space-MNI305_dseg.nii.gz": "",
+            "atlas-AAL_space-MNI305_dseg.tsv": "",
+            "atlas-AAL_space-MNI305_probseg.nii.gz": "",
+            "atlas-AAL_space-MNI305_seg-brain_mask.nii.gz": "",
+            "atlas-AAL_space-MNI305_seg-head_mask.nii.gz": "",
+            "atlas-AAL_space-colin27_dseg.json": "",
+            "atlas-AAL_space-colin27_dseg.nii.gz": "",
+            "atlas-AAL_space-colin27_dseg.tsv": "",
+            "atlas-AAL_space-colin27_probseg.nii.gz": "",
+            "atlas-AAL_space-colin27_seg-brain_mask.nii.gz": "",
+            "atlas-AAL_space-colin27_seg-head_mask.nii.gz": "",
+            "...", "",
          },
       },
    }
@@ -365,10 +366,8 @@ A guide for using macros can be found at
    "ps13-pipeline": {
       "tpl-ps13": {
          "pet": {
-            "atlas-ps13_space-fsaverage_desc-nopvc_dseg.nii.gz": "",
-            "atlas-ps13_space-fsaverage_desc-pvc_dseg.nii.gz": "",
-            "atlas-ps13_space-fsaverage_dseg.json": "",
-            "atlas-ps13_space-fsaverage_dseg.tsv": "",
+            "atlas-fsaverage_dseg.nii.gz": "",
+            "atlas-fsaverage_dseg.json": "",
             "tpl-ps13_space-fsaverage_desc-nopvc_pet.json": "",
             "tpl-ps13_space-fsaverage_desc-nopvc_pet.nii.gz": "",
             "tpl-ps13_space-fsaverage_desc-pvc_pet.json": "",
@@ -393,10 +392,10 @@ A guide for using macros can be found at
             "tpl-ps13_space-fsaverage_stat-std_desc-nopvc_pet.nii.gz": "",
             "tpl-ps13_space-fsaverage_stat-std_desc-pvc_pet.json": "",
             "tpl-ps13_space-fsaverage_stat-std_desc-pvc_pet.nii.gz": "",
-            "tpl-ps13_space-MNI152Lin_atlas-ps13_desc-nopvc_dseg.nii.gz": "",
-            "tpl-ps13_space-MNI152Lin_atlas-ps13_desc-pvc_dseg.nii.gz": "",
-            "tpl-ps13_space-MNI152Lin_atlas-ps13_dseg.json": "",
-            "tpl-ps13_space-MNI152Lin_atlas-ps13_dseg.tsv": "",
+            "tpl-ps13_seg-fsaverage_pet.json": "",
+            "tpl-ps13_seg-fsaverage_json.tsv": "",
+            "tpl-ps13_space-MNI152Lin_desc-nopvc_pet.nii.gz": "",
+            "tpl-ps13_space-MNI152Lin_desc-pvc_pet.nii.gz": "",
             "tpl-ps13_space-MNI152Lin_res-1p5_desc-spmvbmNopvc_pet.json": "",
             "tpl-ps13_space-MNI152Lin_res-1p5_desc-spmvbmNopvc_pet.nii.gz": "",
             "tpl-ps13_space-MNI152Lin_res-1p5_desc-spmvbmPvc_pet.json": "",
@@ -427,9 +426,6 @@ A guide for using macros can be found at
 })
 }}
 
-If the pipeline generates two different atlases for at least one template space
-in the output, then [`atlas-<label>`](../glossary.md#atlas-entities) is REQUIRED
-for disambiguation.
 For example, let's imagine the PS13 atlas is revised in 2034, and based on the
 original pipeline and data, it generates now a new manual segmentation
 in the `MNI152Lin` space with some new regions defined.
@@ -441,25 +437,12 @@ A guide for using macros can be found at
 -->
 {{ MACROS___make_filetree_example({
    "ps13rev2034-pipeline": {
-      "tpl-fsaverage": {
+      "tpl-ps13rev2034": {
          "pet": {
-            "atlas-ps13rev2034_space-fsaverage_desc-nopvc_dseg.nii.gz": "",
-            "atlas-ps13rev2034_space-fsaverage_desc-pvc_dseg.nii.gz": "",
-            "atlas-ps13rev2034_space-fsaverage_dseg.json": "",
-            "atlas-ps13rev2034_space-fsaverage_dseg.tsv": "",
-            "atlas-ps13rev2034_space-fsaverage_hemi-L_den-164k_desc-nopvc_pet.json": "",
-            "atlas-ps13rev2034_space-fsaverage_stat-std_desc-pvc_pet.nii.gz": "",
             "...": "",
-            "atlas-ps13rev2034_space-MNI152Lin_atlas-ps13_desc-nopvc_dseg.nii.gz": "",
-            "atlas-ps13rev2034_space-MNI152Lin_atlas-ps13_desc-pvc_dseg.nii.gz": "",
-            "atlas-ps13rev2034_space-MNI152Lin_atlas-ps13_dseg.json": "",
-            "atlas-ps13rev2034_space-MNI152Lin_atlas-ps13_dseg.tsv": "",
-            "tpl-ps13rev2034_space-MNI152Lin_res-1p5_desc-spmvbmNopvc_pet.json": "",
-            "tpl-ps13rev2034_space-MNI152Lin_res-2_stat-std_desc-pvc_pet.nii.gz": "",
-            "tpl-ps13rev2034_space-MNI152Lin_desc-nopvc_dseg.nii.gz": "",
-            "tpl-ps13rev2034_space-MNI152Lin_desc-pvc_dseg.nii.gz": "",
-            "tpl-ps13rev2034_space-MNI152Lin_dseg.json": "",
-            "tpl-ps13rev2034_space-MNI152Lin_dseg.tsv": "",
+            "atlas-ps13rev2034_space-MNI152Lin_seg-manual_dseg.nii.gz": "",
+            "atlas-ps13rev2034_space-MNI152Lin_seg-manual_dseg.json": "",
+            "atlas-ps13rev2034_space-MNI152Lin_seg-manual_dseg.tsv": "",
             "...": "",
          },
       }
@@ -477,11 +460,10 @@ Either by generating the template space aligning to a pre-existing template,
 or by estimating a transform between templates by means of image registration,
 a new template definition MUST be employed if the new template generates
 a new [*space*](../common-principles.md#definitions).
+
 For example, let's imagine that PS13 first generated a template nuclear imaging
 map and after that, a corresponding [*atlas*](../common-principles.md#definitions)
 was defined.
-In that case, the [`atlas-<label>`](../glossary.md#atlas-entities) SHOULD be omitted
-except several atlases need specification:
 
 <!-- This block generates a file tree.
 A guide for using macros can be found at
@@ -510,7 +492,7 @@ A guide for using macros can be found at
 }}
 
 Let's complete the above example by adding two new atlases to the existing
-template and (*default*) atlas:
+template:
 
 <!-- This block generates a file tree.
 A guide for using macros can be found at
@@ -549,15 +531,6 @@ A guide for using macros can be found at
 where the `atlas-RamonCajal1908` and `atlas-Economo1916` hypothetically define
 two different atlases (please note that, often, atlases are named after
 the first author and indicating a year of a reference communication).
-The original *default* or *implicit* atlas' artifacts such as
-the `atlas-PS13_desc-nopvc_dseg.nii.gz` segmentation,
-which were originally generated with the PS13 template,
-MAY take an [`atlas-<label>`](../glossary.md#atlas-entities) if they
-need to be differentiated from the original template and atlas dataset.
-However, it is RECOMMENDED that these *default* or *implicit* atlases employed
-in the *custom* space they were generated only define
-[`atlas-<label>`](../glossary.md#atlas-entities)
-if it is necessary to disambiguate two or more atlases.
 
 A further example of these template-and-atlas specifications
 is the *Spatially Unbiased Infratentorial Template (SUIT)*
