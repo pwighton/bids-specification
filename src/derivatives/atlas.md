@@ -37,7 +37,8 @@ follows the general BIDS-Derivatives pattern:
 <pipeline_name>/
     sub-<label>/
         <datatype>/
-            <source_entities>[_space-<space>][_cohort-<label>][_atlas-<label>][_template-<label>][seg-<label>][_scale-<label>][_res-<label>][_den-<label>][_desc-<label>]_<suffix>.<extension>
+            <source_entities>[_atlas-<label>][_space-<space>][_cohort-<label>][seg-<label>][_scale-<label>][_res-<label>][_den-<label>][_desc-<label>]_<suffix>.<extension>
+            <source_entities>[_tpl-<label>][_space-<space>][_cohort-<label>][seg-<label>][_scale-<label>][_res-<label>][_den-<label>][_desc-<label>]_<suffix>.<extension>
 ```
 
 For derivatives of template- and altas-generating pipelines, which typically aggregate
@@ -94,10 +95,10 @@ A guide for using macros can be found at
    "colin27-pipeline": {
       "sub-01": {
          "anat": {
-            "atlas-colin27_seg-brain_mask.nii.gz": "",
-            "atlas-colin27_seg_head_mask.nii.gz": '',
-            "tpl-colin27_T1w.nii.gz": "",
-            "tpl-colin27_T1w.json": "",
+            "sub-01_seg-brain_mask.nii.gz": "",
+            "sub-01_seg_head_mask.nii.gz": '',
+            "sub-01_T1w.nii.gz": "",
+            "sub-01_T1w.json": "",
          },
       },
    }
@@ -115,12 +116,12 @@ A guide for using macros can be found at
    "colin27-pipeline": {
       "sub-01": {
          "anat": {
-            "atlas-colin27_res-1_seg-brain_mask.nii.gz": "",
-            "atlas-colin27_res-1_seg-head_mask.nii.gz": "",
-            "tpl-colin27_res-1_T1w.nii.gz": "",
-            "tpl-colin27_res-1_T1w.json": "",
-            "tpl-colin27_res-2_T1w.nii.gz": "",
-            "tpl-colin27_res-2_T1w.json": "",
+            "sub-01_res-1_seg-brain_mask.nii.gz": "",
+            "sub-01_res-1_seg-head_mask.nii.gz": "",
+            "sub-01_res-1_T1w.nii.gz": "",
+            "sub-01_res-1_T1w.json": "",
+            "sub-01_res-2_T1w.nii.gz": "",
+            "sub-01_res-2_T1w.json": "",
          },
       },
    }
@@ -150,19 +151,19 @@ A guide for using macros can be found at
    "mni152nlin2009casym-pipeline": {
       "tpl-MNI152NLin2009cAsym": {
          "anat": {
-            "atlas-MNI152NLin2009cAsym_res-1_seg-brain_mask.nii.gz": "",
-            "atlas-MNI152NLin2009cAsym_res-1_seg-eye_mask.nii.gz": "",
-            "atlas-MNI152NLin2009cAsym_res-1_seg-face_mask.nii.gz": "",
-            "atlas-MNI152NLin2009cAsym_res-1_seg-head_mask.nii.gz": "",
+            "tpl-MNI152NLin2009cAsym_res-1_seg-brain_mask.nii.gz": "",
+            "tpl-MNI152NLin2009cAsym_res-1_seg-eye_mask.nii.gz": "",
+            "tpl-MNI152NLin2009cAsym_res-1_seg-face_mask.nii.gz": "",
+            "tpl-MNI152NLin2009cAsym_res-1_seg-head_mask.nii.gz": "",
             "atlas-MNI152NLin2009cAsym_res-1_seg-CSF_probseg.nii.gz": "",
             "atlas-MNI152NLin2009cAsym_res-1_seg-GM_probseg.nii.gz": "",
             "atlas-MNI152NLin2009cAsym_res-1_seg-WM_probseg.nii.gz": "",
             "tpl-MNI152NLin2009cAsym_res-1_T1w.nii.gz": "",
             "tpl-MNI152NLin2009cAsym_res-1_T1w.json": "",
-            "atlas-MNI152NLin2009cAsym_res-2_seg-brain_mask.nii.gz": "",
-            "atlas-MNI152NLin2009cAsym_res-2_seg-eye_mask.nii.gz": "",
-            "atlas-MNI152NLin2009cAsym_res-2_seg-face_mask.nii.gz": "",
-            "atlas-MNI152NLin2009cAsym_res-2_seg-head_mask.nii.gz": "",
+            "tpl-MNI152NLin2009cAsym_res-2_seg-brain_mask.nii.gz": "",
+            "tpl-MNI152NLin2009cAsym_res-2_seg-eye_mask.nii.gz": "",
+            "tpl-MNI152NLin2009cAsym_res-2_seg-face_mask.nii.gz": "",
+            "tpl-MNI152NLin2009cAsym_res-2_seg-head_mask.nii.gz": "",
             "atlas-MNI152NLin2009cAsym_res-2_seg-CSF_probseg.nii.gz": "",
             "atlas-MNI152NLin2009cAsym_res-2_seg-GM_probseg.nii.gz": "",
             "atlas-MNI152NLin2009cAsym_res-2_seg-WM_probseg.nii.gz": "",
@@ -288,14 +289,14 @@ A guide for using macros can be found at
    "colin27-pipeline": {
       "sub-01": {
          "anat": {
-            "atlas-AAL_dseg.json": "",
-            "atlas-AAL_dseg.nii.gz": "",
-            "atlas-AAL_dseg.tsv": "",
-            "atlas-AAL_probseg.nii.gz": "",
-            "atlas-AAL_seg-brain_mask.nii.gz": "",
-            "atlas-AAL_seg-head_mask.nii.gz": "",
-            "tpl-colin27_T1w.nii.gz": "",
-            "tpl-colin27_T1w.json": "",
+            "sub-01_atlas-AAL_dseg.json": "",
+            "sub-01_atlas-AAL_dseg.nii.gz": "",
+            "sub-01_atlas-AAL_dseg.tsv": "",
+            "sub-01_atlas-AAL_probseg.nii.gz": "",
+            "sub-01_atlas-AAL_seg-brain_mask.nii.gz": "",
+            "sub-01_atlas-AAL_seg-head_mask.nii.gz": "",
+            "sub-01_T1w.nii.gz": "",
+            "sub-01_T1w.json": "",
          },
       },
    }
@@ -473,7 +474,7 @@ A guide for using macros can be found at
    "ps13-pipeline": {
       "tpl-PS13": {
          "pet": {
-            "atals-PS13_desc-nopvc_dseg.nii.gz": "",
+            "atlas-PS13_desc-nopvc_dseg.nii.gz": "",
             "atlas-PS13_desc-pvc_dseg.nii.gz": "",
             "atlas-PS13_dseg.json": "",
             "atlas-PS13_dseg.tsv": "",
