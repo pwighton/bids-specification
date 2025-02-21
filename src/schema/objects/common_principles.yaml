@@ -6,18 +6,7 @@
 atlas:
   display_name: Atlas
   description: |
-    Knowledge about the brain, generally formalized with reference to a standard space
-    (see the *Template* definition above) by means of spatiotemporal annotations
-    such as landmarks, segmentations, parcellations, or probability maps.
-    One prominent manuscript regarding the specific aspects of atlases,
-    such as their *regional resolution*,
-    is [Bijsterbosch et al. (2020)](https://doi.org/10.1038/s41593-020-00726-z).
-
-    To further differentiate the concept of *atlas* and *template* throughout the specification,
-    *template* will designate a standardized stereotaxy frame where
-    some feature or features are mapped through spatial normalization and then possibly averaged.
-    Conversely, *atlas* will designate a specific methodology or algorithm to
-    create meaningful knowledge annotations about the brain such as landmarks or segmentations.
+    A collection of related templates
 data_acquisition:
   display_name: Data acquisition
   description: |
@@ -181,9 +170,8 @@ task:
 template:
   display_name: Template
   description: |
-    An average feature map obtained by aggregation of subjects and/or sessions that allows the
-    spatial location of brain anatomy and function of the templated cohort.
-    Templates operationalize the concept of *standardized spatial frame of analysis*,
+    An aggregation of continuous- or discrete-valued data across subjects and/or sessions.
+    Templates MAY operationalize the concept of *standardized spatial frame of analysis*,
     a common *Space* in which subjects' data can be spatially-normalized into for group inference.
     Like subjects' feature maps generate a *native* spatial frame of reference for analyses,
     templates engender a *generic* or *standard* space of analysis were subjects can be spatiotemporally
