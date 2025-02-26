@@ -8,7 +8,7 @@ These outcomes typically involve quantitative maps, feature maps, parcellations,
 segmentations, and other knowledge annotations such as landmarks in
 individual- or group-level spaces.
 
-In BIDS, a template is considered any aggregation of continuous- or discreet- 
+In BIDS, a template is considered any aggregation of continuous- or discrete- 
 valued data.  Some templates also serve as the authoritative definition of a
 space and are used to bring other imaging data into alignment so that it can be 
 aggregated.
