@@ -349,8 +349,8 @@ A guide for using macros can be found at
 
 For example, the [PS13 templates](https://doi.org/10.18112/openneuro.ds004401.v1.3.0),
 a molecular imaging brain template of Cyclooxygenase-1 (PET),
-was generated in two standard spaces: `MNI152Lin` and `fsaverage`.  Here, the `atlas-` 
-entity is not used, since `tpl-` along with other entities is sufficient to disambiguate:
+was generated in two standard spaces: `MNI152Lin` and `fsaverage`.
+Here, the `atlas-` entity is not used, since `tpl-` along with other entities is sufficient to disambiguate:
 
 <!-- This block generates a file tree.
 A guide for using macros can be found at
